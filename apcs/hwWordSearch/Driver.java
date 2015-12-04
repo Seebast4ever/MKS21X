@@ -1,0 +1,29 @@
+/*
+1. If no command line arguments are specified, print directions to tell the user how to run the program.
+2. rows and cols are the dimension of the puzzle, if they are the only parameters passed, you cannot generate an answer to the puzzle. 
+3. The randomSeed can be changed to force the same puzzle to occur again, so you can print the puzzle and the answers later.
+4. If the randomSeed is provided, you can have a 4th parameter to display answers. You trigger answer mode by passing the value 1 into the answers parameter. Omitting the answers parameter, or passing any other values will just display the normal puzzle, and not show the answer.
+
+*/
+// [rows cols [randomSeed [answers]]]
+public class Driver{
+    public static void main(String[]args){
+	WordSearch search;
+	if(args.length<2){
+	    System.out.println("Please imput more values to complete the Word Search");
+	    System.exit(0);
+	}
+	else if (args.length==2){
+	    search = new WordSearch(Integer.parseInt(args[0]),Integer.parseInt(args[1]));
+	}
+	else if (args.length==3){
+	    search = new WordSearch(Integer.parseInt(args[0]),Integer.parseInt(args[1]));
+	}
+	else{
+	    search = new WordSearch(Integer.parseInt(args[0]),Integer.parseInt(args[1]));
+	}
+	search.addWord();
+    }
+
+
+}

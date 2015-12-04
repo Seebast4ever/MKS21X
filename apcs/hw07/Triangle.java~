@@ -1,0 +1,46 @@
+public class Triangle{
+    /*                                                                                                            
+     *Instance Variables                                                                                          
+     */
+    private Coordinate v1,v2,v3;
+
+    public Triangle(){}
+
+    //1 
+    public Triangle(Coordinate a,Coordinate b, Coordinate c){
+	v1 = a;
+	v2 = b;
+	v3 = c;
+}
+
+    //2
+    public Triangle(double x1,double y1,double x2,double y2,double x3,double y3){
+	Coordinate v1 = new Coordinate (x1, y1);
+	Coordinate v2 = new Coordinate (x2, y2);
+	Coordinate v3 = new Coordinate (x3, y3);
+}
+
+    //3
+    public String toString(){
+        return "Triangle:" + v1 + ", " +  v2 + ", " + v3;
+    }
+
+    //4
+    public double getPerimeter(){
+        return v1.getDistance(v2) + v2.getDistance(v3) + v3.getDistance(v1);
+	
+    }
+
+    //5  (use Heron's formula)
+    public double getArea(){
+        double s = getPerimeter() / 2;
+	return math.sqrt(s * (s - v1.distToOrigin()) * (s - v2.distToOrigin()) * (s - v3.distToOrigin()));
+    }
+
+    //6 use your smarts, remember for booleans || is or, && is and.
+    //e.g.    x > 0 || x < 0
+    public boolean isRight(){
+        return false;
+    }
+
+}

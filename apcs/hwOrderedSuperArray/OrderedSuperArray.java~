@@ -1,0 +1,19 @@
+public class OrderedSuperArray extends SuperArray{
+    
+    public OrderedSuperArray(){
+	super();
+    }
+
+    public OrderedSuperArray(int capacity){
+	super(capacity);
+    }
+
+    public OrderedSuperArray(int [] ary){
+	
+    }
+
+    public int indexOf(int value){
+	
+    }
+
+}

@@ -1,10 +1,10 @@
 public class TempConverter{
 
-    public double CtoF(double t){
+    public static double CtoF(double t){
 	return (double)((((t * 9) / 5) + 32));
     }
     
-    public double FtoC(double t){
+    public static double FtoC(double t){
 	return (double)((((t - 32) * 5) / 9));
     }
     

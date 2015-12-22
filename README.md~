@@ -1,7 +1,7 @@
 # MKS21X
-APCS Repository
-LIST OF KNOWN GIT COMMANDS
-git init: creates a new Git repository
+APCS Repository<br>
+LIST OF KNOWN GIT COMMANDS<br>
+git init: creates a new Git repository<br>
 git status: inspects the contents of the working directory and staging area
 git add: adds files from the working directory to the staging area
 git diff: shows the difference between the working directory and the staging area

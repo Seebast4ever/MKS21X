@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;//NEW STUFF!
+import java.awt.event.*;
+
+public class TempConversionWindow extends JFrame implements ActionListener{
+    private Container pane;
+    private JLabel j;
+    private JTextField t;
+
+    public TempConversionWindow() {
+	this.setTitle("My first GUI");
+	this.setSize(600,400);
+	this.setLocation(100,100);
+	this.setDefaultCloseOperation(
+				      EXIT_ON_CLOSE);
+
+	pane = this.getContentPane();
+	pane.setLayout(new FlowLayout());
+
+	JButton b = new JButton("Celcius to Farenheit");
+	b.addActionListener(this);
+	b.setActionCommand("Byte");
+	JButton b2 = new JButton("Farenheit to Celcius");
+	b2.addActionListener(this);
+	b2.setActionCommand("NotByte");
+
+
+	t = new JTextField(5);
+	j = new JLabel(/*RETURN STATEMENT*/);
+	pane.add(t);
+	pane.add(b);
+	pane.add(b2);
+	pane.add(j);
+    }
+
+    public void actionPerformed(ActionEvent e){
+	String event = e.getActionCommand();
+	if(event.equals("Byte")){
+	    int s = Integer.parseInt(t.getText());
+	    j.setText(Integer.toString((((s * 9) / 5) + 32)));
+	}
+	if(event.equals("NotByte")){
+	    int s = Integer.parseInt(t.getText());
+            j.setText(Integer.toString(((((s - 32) * 5) / 9))));
+    
+	}
+ 
+ 
+    }
+}

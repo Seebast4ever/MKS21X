@@ -2,7 +2,7 @@ public class Sorts{
     public static void printArray(int[]data){
 	String ans = "[";
 	for(int x: data){
-	    ans += ", " + x;
+	    ans += ", " +  x;
 	}
 	System.out.println(ans + "]");
     }

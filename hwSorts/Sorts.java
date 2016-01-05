@@ -21,8 +21,25 @@ public class Sorts{
 	}
     }
 */
-    public static void selection(int []){
-	
+    public static void printArray(int[]data){                                                                                
+        String ans = "[";                                                                                                    
+        for(int x: data){                                                                                                    
+            ans += ", " +  x;                                                                                                
+        }                                                                                                                    
+        System.out.println(ans + "]");                                                                                       
+    } 
+    public static void selection(int []data){
+	for(int x = 0; x < data.length - 1; x++){
+	    int small = x;
+	    for(int n = x + 1; n < data.length; n++){
+		if(data[n] < data[small]){
+		    small = n;
+		}
+	    }
+	    int temp = data[small];
+	    data[small] = data[x];
+	    data[x] = temp;
+	}
     }
 
 }

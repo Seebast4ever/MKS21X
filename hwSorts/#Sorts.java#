@@ -39,7 +39,7 @@ public class Sorts{
 	    int temp = data[small];
 	    data[small] = data[x];
 	    data[x] = temp;
-	    Sorts.printArray(selectionSort);
+	    System.out.println();
 	}
     }
     
